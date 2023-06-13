@@ -2,7 +2,8 @@
 
 /** @type {import('jest').Config} */
 const config = {
-  testEnvironment: 'jsdom',
+  //testEnvironment: 'jsdom',
+  testEnvironment: '@happy-dom/jest-environment',
 
   // Run once per test file
   // Executed before executing setupFilesAfterEnv and before the test code itself
