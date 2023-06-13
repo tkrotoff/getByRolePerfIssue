@@ -1,0 +1,27 @@
+# https://github.com/actions/starter-workflows/blob/0a3644524d68072ce9bc7a23882039adae357184/ci/node.js.yml
+
+name: Node.js CI
+
+# https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{matrix.node-version}}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{matrix.node-version}}
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run test

@@ -1,0 +1,12 @@
+.DS_Store
+
+.git/
+.gitignore
+.eslintcache
+.prettierignore
+.eslintignore
+.editorconfig
+.browserslistrc
+LICENSE
+
+build/
