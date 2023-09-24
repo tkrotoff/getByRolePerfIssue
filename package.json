@@ -12,8 +12,8 @@
     "build:prod": "npm run clean && webpack --mode=production",
     "test": "jest --verbose --no-cache",
     "tsc": "tsc",
-    "format": "prettier --write '**/*'",
-    "lint": "npm run tsc && eslint . '**/*.{js,ts,tsx}'",
+    "format": "prettier --write .",
+    "lint": "npm run tsc && eslint .",
     "npm:update": "npm run clean:all && npx npm-check-updates --upgrade && npm install"
   },
   "dependencies": {
