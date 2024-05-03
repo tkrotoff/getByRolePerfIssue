@@ -8,7 +8,7 @@ const path = require('node:path');
  * @param {any} _webpackEnv
  * @param {any} argv
  */
-module.exports = (_webpackEnv, argv) => {
+function getConfig(_webpackEnv, argv) {
   /** @type {import('webpack').Configuration} */
   const config = {
     entry: {
@@ -41,4 +41,6 @@ module.exports = (_webpackEnv, argv) => {
   };
 
   return config;
-};
+}
+
+module.exports = getConfig;
